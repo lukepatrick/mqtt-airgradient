@@ -1,0 +1,99 @@
+mqtt:
+  sensor:
+    - name: "CO2"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.rco2 }}"
+      unit_of_measurement: "ppm"
+      icon: mdi:molecule-co2
+      device_class: carbon_dioxide
+      state_class: measurement
+      suggested_display_precision: 0
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
+    - name: "WiFi"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.wifi }}"
+      device_class: signal_strength
+      state_class: measurement
+      unit_of_measurement: dBm
+      suggested_display_precision: 0
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
+    - name: "Temperature"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.atmp }}"
+      unit_of_measurement: °C
+      icon: mdi:thermometer
+      device_class: temperature
+      state_class: measurement
+      suggested_display_precision: 2
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
+    - name: "Humidity"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.rhum }}"
+      unit_of_measurement: '%'
+      icon: mdi:water-percent
+      device_class: humidity
+      state_class: measurement
+      suggested_display_precision: 2
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
+    - name: "VOC Index"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.tvoc_index }}"
+      icon: mdi:radiator
+      device_class: aqi
+      state_class: measurement
+      suggested_display_precision: 0
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
+    - name: "VOC Raw"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.tvoc_raw }}"
+      icon: mdi:radiator
+      device_class: aqi
+      state_class: measurement    
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one" 
+    - name: "NOx Index"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.nox_index }}"
+      icon: mdi:radiator
+      device_class: aqi
+      state_class: measurement
+      suggested_display_precision: 0
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
+    - name: "NOx Raw"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.nox_raw }}"
+      icon: mdi:radiator
+      device_class: aqi
+      state_class: measurement
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
