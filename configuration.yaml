@@ -97,3 +97,54 @@ mqtt:
         manufacturer: "AirGradient"
         model: "AirGradient One"
         name: "ag-one"
+    - name: "PM 1.0"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.pm01 }}"
+      unit_of_measurement: "µg/m³"
+      icon: mdi:chemical-weapon
+      device_class: pm1
+      state_class: measurement
+      suggested_display_precision: 0
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
+    - name: "PM 2.5"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.pm02 }}"
+      unit_of_measurement: "µg/m³"
+      icon: mdi:chemical-weapon
+      device_class: pm25
+      state_class: measurement
+      suggested_display_precision: 0
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
+    - name: "PM 10.0"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.pm10 }}"
+      unit_of_measurement: "µg/m³"
+      icon: mdi:chemical-weapon
+      device_class: pm10
+      state_class: measurement
+      suggested_display_precision: 0
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
+    - name: "PM 0.3"
+      state_topic: "airgradient/readings/123xyz"
+      value_template: "{{ value_json.pm003_count }}"
+      unit_of_measurement: "/dL"
+      icon: mdi:chemical-weapon
+      state_class: measurement
+      suggested_display_precision: 0
+      device:
+        identifiers: "123xyz"
+        manufacturer: "AirGradient"
+        model: "AirGradient One"
+        name: "ag-one"
